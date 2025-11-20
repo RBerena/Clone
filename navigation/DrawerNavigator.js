@@ -9,7 +9,7 @@ import PlantsScreen from '../screens/PlantsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ShoppingScreen from '../screens/ShoppingScreen';
 import AllUsersScreen from '../screens/AllUsersScreen';
-
+import ARScreen from '../screens/ARScanScreen';
 import AdminDashboardScreen from '../screens/AdminDashboardScreen';
 import FAQScreen from '../screens/FAQScreen';
 import MyGalleryScreen from '../screens/MyGalleryScreen';
@@ -74,6 +74,7 @@ function CustomDrawerContent(props) {
           </TouchableOpacity>
           <Text style={styles.titleText}>CasaPlanta</Text>
         </View>
+        
  
         <View style={styles.menuSection}>
           <DrawerItem
@@ -154,6 +155,13 @@ export default function DrawerNavigator() {
         name="MainTabs"
         component={BottomTabs}
         options={{ headerShown: false }}
+      />
+      <Drawer.Screen
+        name="ARScan"
+        component={ARScreen}
+        options={{ 
+          headerShown: false, // Hide header since it's accessed via HomeScreen buttons
+        }}
       />
       <Drawer.Screen
         name="MyGallery"
