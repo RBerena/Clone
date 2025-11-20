@@ -227,10 +227,15 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       <View style={styles.sloganBox}>
-        <Text style={styles.slogan}>From Plant to Pixel,{"\n"}the Nature unfolds.</Text>
-        <TouchableOpacity style={styles.scanBtn} onPress={() => navigation.navigate('Scan')}>
-          <Text style={styles.scanText}>Scan</Text>
-        </TouchableOpacity>
+        <Text style={styles.slogan}>From Plant to Pixel,{"\n"}the Nature unfolds.</Text>          
+          <View style={styles.buttonRow}>
+          <TouchableOpacity style={styles.scanBtn} onPress={() => navigation.navigate('Scan')}>
+            <Text style={styles.scanText}>Scan</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.arBtn} onPress={() => navigation.navigate('ARScan')}>
+            <Text style={styles.arText}>AR View</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       <Animated.View style={[styles.featuredCard, { transform: [{ scale: scaleAnim }] }]}>
@@ -294,10 +299,52 @@ const styles = StyleSheet.create({
   statLabel: { fontSize: 11, color: 'gray', marginBottom: 4 },
   statValue: { fontSize: 18, fontWeight: 'bold' },
   statDelta: { fontSize: 12, color: 'gray', marginTop: 2 },
-  sloganBox: { borderWidth: 1, borderColor: '#ccc', borderRadius: 16, alignItems: 'center', padding: 18, marginBottom: 20 },
-  slogan: { textAlign: 'center', fontSize: 18, fontWeight: '600', marginBottom: 14 },
-  scanBtn: { backgroundColor: '#8af09b', borderRadius: 8, paddingHorizontal: 36, paddingVertical: 10, elevation: 2 },
-  scanText: { color: '#fff', fontWeight: '600' },
+  sloganBox: { 
+    borderWidth: 1, 
+    borderColor: '#ccc', 
+    borderRadius: 16, 
+    alignItems: 'center', 
+    padding: 18, 
+    marginBottom: 20 
+  },
+  slogan: { 
+    textAlign: 'center', 
+    fontSize: 18, 
+    fontWeight: '600', 
+    marginBottom: 14 
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    gap: 12,
+  },
+  scanBtn: { 
+    backgroundColor: '#8af09b', 
+    borderRadius: 8, 
+    paddingHorizontal: 24, 
+    paddingVertical: 10, 
+    elevation: 2,
+    flex: 1,
+  },
+  arBtn: {
+    backgroundColor: '#a78bfa',
+    borderRadius: 8,
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+    elevation: 2,
+    flex: 1,
+  },
+  scanText: { 
+    color: '#fff', 
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  arText: {
+    color: '#fff',
+    fontWeight: '600',
+    textAlign: 'center',
+  },
   featuredCard: {
     backgroundColor: '#f0fff0',
     borderRadius: 12,
@@ -318,5 +365,10 @@ const styles = StyleSheet.create({
   productImg: { width: 100, height: 100, borderRadius: 8 },
   productName: { fontWeight: 'bold', marginTop: 6, textAlign: 'center' },
   productPrice: { color: 'gray', fontSize: 13 },
-  cardIcons: { flexDirection: 'row', justifyContent: 'space-between', width: 60, marginTop: 5 },
+  cardIcons: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    width: 60, 
+    marginTop: 5 
+  },
 });

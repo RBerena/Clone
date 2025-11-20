@@ -9,7 +9,7 @@ import PlantsScreen from '../screens/PlantsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ShoppingScreen from '../screens/ShoppingScreen';
 import AllUsersScreen from '../screens/AllUsersScreen';
- 
+
 import AdminDashboardScreen from '../screens/AdminDashboardScreen';
 import FAQScreen from '../screens/FAQScreen';
 import MyGalleryScreen from '../screens/MyGalleryScreen';
