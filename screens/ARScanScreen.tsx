@@ -48,9 +48,13 @@ export default function ARScanScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
       <ViroARSceneNavigator
-        initialScene={{ scene: scene }}
-        autofocus
-      />
+  initialScene={{ scene: () => <ARSurroundScene /> }}
+  viroAppProps={{
+    onPlantDataUpdate: handlePlantDataUpdate,
+    onLoadingUpdate: handleLoadingUpdate,
+  }}
+  autofocus
+/>
 
       {/* Bottom HUD panel - Only show when we have plant data */}
       {result && (

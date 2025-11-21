@@ -9,7 +9,6 @@ import PlantsScreen from '../screens/PlantsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ShoppingScreen from '../screens/ShoppingScreen';
 import AllUsersScreen from '../screens/AllUsersScreen';
-import ARScreen from '../screens/ARScanScreen';
 import AdminDashboardScreen from '../screens/AdminDashboardScreen';
 import FAQScreen from '../screens/FAQScreen';
 import MyGalleryScreen from '../screens/MyGalleryScreen';
@@ -158,10 +157,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="ARScan"
-        component={ARScreen}
-        options={{ 
-          headerShown: false, // Hide header since it's accessed via HomeScreen buttons
-        }}
+        getComponent={() => require('../screens/ARScanScreen').default}
       />
       <Drawer.Screen
         name="MyGallery"

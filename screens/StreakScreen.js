@@ -29,7 +29,7 @@ export default function StreakScreen({ visible, onClose }) {
         <View style={styles.modalContent}>
           {/* Header with close button */}
           <View style={styles.header}>
-            <View style={styles.topIndicator} />
+            <View />
             <TouchableOpacity onPress={handleClose} style={styles.closeButton}>
               <Feather name="x" size={24} color="#666" />
             </TouchableOpacity>
@@ -60,9 +60,6 @@ export default function StreakScreen({ visible, onClose }) {
               </View>
             ))}
           </View>
-         
-          {/* Bottom indicator */}
-          <View style={styles.bottomIndicator} />
         </View>
       </View>
     </Modal>
